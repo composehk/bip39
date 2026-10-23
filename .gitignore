@@ -1,2 +1,6 @@
 node_modules
 bip39-standalone.html
+
+# composehk .NET demo build output
+dotnet/**/bin/
+dotnet/**/obj/
