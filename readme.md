@@ -1,5 +1,7 @@
 # BIP39 Tool
 
+**composehk .NET demo:** this fork adds a small .NET 8 console under [`dotnet/Bip39Net`](dotnet/Bip39Net) (generate / validate / derive). The browser tool is unchanged. Learning only — do not use it with real funds. See [DOTNET.md](DOTNET.md) and [dotnet/README.md](dotnet/README.md).
+
 A tool for converting BIP39 mnemonic phrases to addresses and private keys.
 
 ## Online Version
