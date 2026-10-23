@@ -1,0 +1,23 @@
+name: dotnet
+
+on:
+  push:
+    branches: [master]
+    paths: ['dotnet/**', '.github/workflows/dotnet.yml']
+  pull_request:
+    branches: [master]
+    paths: ['dotnet/**', '.github/workflows/dotnet.yml']
+  workflow_dispatch:
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - name: Build
+        run: dotnet build dotnet/Bip39Net/Bip39Net.sln -c Release
+      - name: Test
+        run: dotnet test dotnet/Bip39Net/Bip39Net.sln -c Release --no-build --verbosity normal
